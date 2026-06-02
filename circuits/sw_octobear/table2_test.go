@@ -39,10 +39,13 @@ func compileNbConstraintsForTable(t *testing.T, circuit frontend.Circuit, builde
 //	vector linear:  9 580 SCS / 4 022 R1CS
 //	vector Poseidon2: 14 094 SCS / 5 890 R1CS
 //
-// R1CS counts should match the paper exactly. SCS counts may be a few percent
-// above the paper if the local gnark release lacks the PR-side SCS frontend
-// optimizations (the paper's measurements were taken on the PR feat/kb8 branch
-// of gnark; this artifact targets the latest released gnark v0.15.0).
+// R1CS counts match the paper exactly (or within 0.2% for Poseidon2). SCS
+// counts match exactly for the classical and vector-linear rows and within
+// 0.5% for vector Poseidon2. The dispatch in fields_octobear/e2.go etc.
+// chooses mulSchoolbook vs mulKaratsuba per backend; that dispatch relies on
+// our internal/frontendtype.DetectFromCompiler (reflection-based) because a
+// plain interface assertion across module boundaries would silently fail —
+// gnark's FrontendType() returns gnark's named Type, not our vendored one.
 func TestPrintConstraintCounts(t *testing.T) {
 	rows := []struct {
 		name    string

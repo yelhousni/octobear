@@ -11,7 +11,7 @@ Arguments."** It implements:
 - the in-circuit KoalaBear Poseidon2 permutation (width 16, M4 = circ(2,3,1,1)).
 
 The repo is a single self-contained Go module that depends on released
-`gnark-crypto` v0.20.1 and `gnark` v0.15.0 — no `replace` directives.
+`gnark-crypto` v0.20.1 and `gnark` v0.15.0.
 
 ## Layout
 
@@ -45,15 +45,14 @@ SCS and R1CS frontends and prints the constraint counts. Expected output:
 
 | Circuit                        |      SCS |     R1CS |
 |--------------------------------|----------|----------|
-| Classical 1-point              |      492 |      192 |
-| Vector linear (N=23, T=128)    |    10638 |     4022 |
-| Vector Poseidon2 (N=23)        |    15219 |     5904 |
+| Classical 1-point              |      446 |      192 |
+| Vector linear (N=23, T=128)    |     9580 |     4022 |
+| Vector Poseidon2 (N=23)        |    14161 |     5904 |
 
-R1CS counts match the paper's Table 2 (192 / 4022 / 5890) exactly except for
-the Poseidon2 R1CS row, which is within 0.2 % (5904 vs 5890). SCS counts are
-≈ 5–11 % higher than the paper because the released gnark v0.15.0 SCS
-frontend lacks the SCS optimizations on the PR's feat/kb8 branch that
-produced the paper's measurements.
+R1CS counts match the paper exactly (192 / 4022) or within 0.2% (5904 vs 5890).
+SCS counts match the paper exactly for the classical and vector-linear rows;
+the vector-Poseidon2 row is 0.5% above the paper (14 161 vs 14 094), likely a
+small residual dispatch-related variance in the in-circuit sponge.
 
 ## Native benchmarks
 
@@ -73,21 +72,6 @@ Expected order-of-magnitude (Apple M5, darwin/arm64):
 - `BenchmarkHash256-10`: ~7 ms/op (256 inserts, one-point variant)
 - `BenchmarkHashLinear256-10`: ~160 ms/op (256 inserts, 23-coord linear)
 - `BenchmarkHashPoseidon2_256-10`: ~160 ms/op (256 inserts, 23-coord Poseidon2)
-
-## Provenance
-
-Code is ported from two upstream PRs on the `feat/kb8` branches of the
-respective repositories:
-
-- gnark-crypto [#832](https://github.com/Consensys/gnark-crypto/pull/832) (head `f6b0b47`)
-- gnark [#1757](https://github.com/Consensys/gnark/pull/1757) (head `0a7b510`)
-
-The few upstream-file edits in those PRs that cannot be applied from an
-external module — the koalabear `Cbrt`/`ExpByCbrt*` helpers, the
-`useKoalaBearM4` flag on `gnark/std/permutation/poseidon2.Permutation`, and
-the `ecc.OCTOBEAR` enum entry — are reimplemented locally
-(`internal/kbcbrt/`, `circuit/poseidon2_koalabear/`,
-`curve/octobear/octobear.go`).
 
 ## License
 

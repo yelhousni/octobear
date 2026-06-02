@@ -71,8 +71,8 @@ func (e *E4) Mul(api frontend.API, e1, e2 E4) *E4 {
 }
 
 func (e *E4) Square(api frontend.API, x E4) *E4 {
-	if ft, ok := api.Compiler().(frontendtype.FrontendTyper); ok {
-		switch ft.FrontendType() {
+	if ft, ok := frontendtype.DetectFromCompiler(api.Compiler()); ok {
+		switch ft {
 		case frontendtype.R1CS:
 			return e.squareKaratsuba(api, x)
 		case frontendtype.SCS:

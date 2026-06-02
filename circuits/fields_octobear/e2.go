@@ -59,8 +59,8 @@ func (e *E2) Sub(api frontend.API, e1, e2 E2) *E2 {
 }
 
 func (e *E2) Mul(api frontend.API, e1, e2 E2) *E2 {
-	if ft, ok := api.Compiler().(frontendtype.FrontendTyper); ok {
-		switch ft.FrontendType() {
+	if ft, ok := frontendtype.DetectFromCompiler(api.Compiler()); ok {
+		switch ft {
 		case frontendtype.R1CS:
 			return e.mulKaratsuba(api, e1, e2)
 		case frontendtype.SCS:
@@ -94,8 +94,8 @@ func (e *E2) mulSchoolbook(api frontend.API, e1, e2 E2) *E2 {
 }
 
 func (e *E2) Square(api frontend.API, x E2) *E2 {
-	if ft, ok := api.Compiler().(frontendtype.FrontendTyper); ok {
-		switch ft.FrontendType() {
+	if ft, ok := frontendtype.DetectFromCompiler(api.Compiler()); ok {
+		switch ft {
 		case frontendtype.R1CS:
 			return e.squareKaratsuba(api, x)
 		case frontendtype.SCS:
