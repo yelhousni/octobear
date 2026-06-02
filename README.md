@@ -79,7 +79,3 @@ In-circuit witness-solve benchmarks (one Insert on each variant, SCS and R1CS):
 ```sh
 go test ./circuits/sw_octobear -bench 'BenchmarkMultisetHashCircuitSolve|BenchmarkLinearMultisetHashCircuitSolve|BenchmarkPoseidon2MultisetHashCircuitSolve' -run '^$' -benchtime=1x -v
 ```
-
-## License
-
-Apache 2.0 — see `LICENSE`.
