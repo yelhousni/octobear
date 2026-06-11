@@ -3,9 +3,9 @@ package sw_octobear
 import (
 	"testing"
 
-	octobear "github.com/yelhousni/octobear/curve"
 	"github.com/consensys/gnark/frontend"
 	"github.com/consensys/gnark/test"
+	octobear "github.com/yelhousni/octobear/curve"
 )
 
 type g1AddAssignAffine struct {

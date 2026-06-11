@@ -3,9 +3,9 @@ package maptocurve_octobear
 import (
 	"testing"
 
-	nativemsh "github.com/yelhousni/octobear/curve/multiset-hash"
 	"github.com/consensys/gnark/frontend"
 	"github.com/consensys/gnark/test"
+	nativemsh "github.com/yelhousni/octobear/curve/multiset-hash"
 )
 
 type yIncrementCircuit struct {

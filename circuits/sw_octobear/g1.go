@@ -3,11 +3,11 @@ package sw_octobear
 import (
 	"errors"
 
-	octobear "github.com/yelhousni/octobear/curve"
 	kbfp "github.com/consensys/gnark-crypto/field/koalabear"
 	"github.com/consensys/gnark/frontend"
 	"github.com/yelhousni/octobear/circuits/fields_octobear"
 	"github.com/yelhousni/octobear/circuits/maptocurve_octobear"
+	octobear "github.com/yelhousni/octobear/curve"
 )
 
 // Curve exposes octobear point operations in circuits over the KoalaBear field.

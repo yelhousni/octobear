@@ -1,9 +1,9 @@
 package sw_octobear
 
 import (
-	nativeoctobear "github.com/yelhousni/octobear/curve"
 	"github.com/consensys/gnark/frontend"
 	"github.com/yelhousni/octobear/circuits/fields_octobear"
+	nativeoctobear "github.com/yelhousni/octobear/curve"
 )
 
 type E2 = fields_octobear.E2

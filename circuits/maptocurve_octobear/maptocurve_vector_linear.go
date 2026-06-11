@@ -3,10 +3,10 @@ package maptocurve_octobear
 import (
 	"errors"
 
-	octobear "github.com/yelhousni/octobear/curve"
 	"github.com/consensys/gnark/frontend"
-	"github.com/yelhousni/octobear/circuits/fields_octobear"
 	"github.com/consensys/gnark/std/rangecheck"
+	"github.com/yelhousni/octobear/circuits/fields_octobear"
+	octobear "github.com/yelhousni/octobear/curve"
 )
 
 // Linear-separator vector ECMSH parameters (paper §4, App. B "T=128" row).

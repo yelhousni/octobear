@@ -1,10 +1,10 @@
 package maptocurve_octobear
 
 import (
-	octobear "github.com/yelhousni/octobear/curve"
-	"github.com/yelhousni/octobear/curve/extensions"
 	"github.com/consensys/gnark/frontend"
 	"github.com/yelhousni/octobear/circuits/fields_octobear"
+	octobear "github.com/yelhousni/octobear/curve"
+	"github.com/yelhousni/octobear/curve/extensions"
 )
 
 type E2 = fields_octobear.E2

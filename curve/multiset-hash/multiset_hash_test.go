@@ -3,9 +3,9 @@ package multisethash
 import (
 	"testing"
 
+	"github.com/stretchr/testify/require"
 	octobear "github.com/yelhousni/octobear/curve"
 	"github.com/yelhousni/octobear/curve/extensions"
-	"github.com/stretchr/testify/require"
 )
 
 func sampleMessages(n int) []uint16 {

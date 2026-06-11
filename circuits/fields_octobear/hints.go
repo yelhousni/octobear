@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/yelhousni/octobear/curve/extensions"
 	"github.com/consensys/gnark/constraint/solver"
+	"github.com/yelhousni/octobear/curve/extensions"
 )
 
 func init() {

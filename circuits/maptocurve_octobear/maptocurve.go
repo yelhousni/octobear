@@ -3,11 +3,11 @@ package maptocurve_octobear
 import (
 	"errors"
 
-	octobear "github.com/yelhousni/octobear/curve"
 	kbfp "github.com/consensys/gnark-crypto/field/koalabear"
 	"github.com/consensys/gnark/frontend"
-	"github.com/yelhousni/octobear/circuits/fields_octobear"
 	"github.com/consensys/gnark/std/rangecheck"
+	"github.com/yelhousni/octobear/circuits/fields_octobear"
+	octobear "github.com/yelhousni/octobear/curve"
 )
 
 const T = 256

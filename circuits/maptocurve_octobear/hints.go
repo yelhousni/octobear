@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"math/big"
 
-	multisethash "github.com/yelhousni/octobear/curve/multiset-hash"
-	"github.com/yelhousni/octobear/curve/extensions"
 	"github.com/consensys/gnark/constraint/solver"
+	"github.com/yelhousni/octobear/curve/extensions"
+	multisethash "github.com/yelhousni/octobear/curve/multiset-hash"
 )
 
 func init() {

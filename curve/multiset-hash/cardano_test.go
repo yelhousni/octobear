@@ -3,8 +3,8 @@ package multisethash
 import (
 	"testing"
 
-	"github.com/yelhousni/octobear/curve/extensions"
 	"github.com/stretchr/testify/require"
+	"github.com/yelhousni/octobear/curve/extensions"
 )
 
 func TestCbrtE8OnCubicResidues(t *testing.T) {

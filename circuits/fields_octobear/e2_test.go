@@ -3,9 +3,9 @@ package fields_octobear
 import (
 	"testing"
 
-	"github.com/yelhousni/octobear/curve/extensions"
 	"github.com/consensys/gnark/frontend"
 	"github.com/consensys/gnark/test"
+	"github.com/yelhousni/octobear/curve/extensions"
 )
 
 type e2Add struct{ A, B, C E2 }

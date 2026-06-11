@@ -3,15 +3,15 @@ package sw_octobear
 import (
 	"testing"
 
-	octobear "github.com/yelhousni/octobear/curve"
-	nativemsh "github.com/yelhousni/octobear/curve/multiset-hash"
 	"github.com/consensys/gnark-crypto/field/koalabear"
 	"github.com/consensys/gnark/constraint"
 	"github.com/consensys/gnark/frontend"
 	"github.com/consensys/gnark/frontend/cs/r1cs"
 	"github.com/consensys/gnark/frontend/cs/scs"
-	"github.com/yelhousni/octobear/internal/widecommitter"
 	"github.com/consensys/gnark/test"
+	octobear "github.com/yelhousni/octobear/curve"
+	nativemsh "github.com/yelhousni/octobear/curve/multiset-hash"
+	"github.com/yelhousni/octobear/internal/widecommitter"
 )
 
 // multisetHashCircuit is the 1-point octobear multiset-hash verification circuit.

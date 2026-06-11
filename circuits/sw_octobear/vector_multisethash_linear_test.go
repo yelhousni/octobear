@@ -3,16 +3,16 @@ package sw_octobear
 import (
 	"testing"
 
-	octobear "github.com/yelhousni/octobear/curve"
-	nativemsh "github.com/yelhousni/octobear/curve/multiset-hash"
 	"github.com/consensys/gnark-crypto/field/koalabear"
 	"github.com/consensys/gnark/constraint"
 	"github.com/consensys/gnark/frontend"
 	"github.com/consensys/gnark/frontend/cs/r1cs"
 	"github.com/consensys/gnark/frontend/cs/scs"
-	"github.com/yelhousni/octobear/internal/widecommitter"
-	"github.com/yelhousni/octobear/circuits/maptocurve_octobear"
 	"github.com/consensys/gnark/test"
+	"github.com/yelhousni/octobear/circuits/maptocurve_octobear"
+	octobear "github.com/yelhousni/octobear/curve"
+	nativemsh "github.com/yelhousni/octobear/curve/multiset-hash"
+	"github.com/yelhousni/octobear/internal/widecommitter"
 )
 
 // linearHashCircuit verifies LinearAccumulator over a small batch of inserts.

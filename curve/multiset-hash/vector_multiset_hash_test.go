@@ -5,9 +5,9 @@ import (
 	"math/big"
 	"testing"
 
-	octobear "github.com/yelhousni/octobear/curve"
 	"github.com/consensys/gnark-crypto/field/koalabear"
 	"github.com/stretchr/testify/require"
+	octobear "github.com/yelhousni/octobear/curve"
 )
 
 // halfModulus returns floor(p/2), the threshold below which the encoded

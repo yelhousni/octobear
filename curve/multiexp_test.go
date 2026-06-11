@@ -13,9 +13,9 @@ import (
 	"testing"
 
 	"github.com/consensys/gnark-crypto/ecc"
-	"github.com/yelhousni/octobear/curve/fr"
 	"github.com/leanovate/gopter"
 	"github.com/leanovate/gopter/prop"
+	"github.com/yelhousni/octobear/curve/fr"
 )
 
 func TestMultiExpG1(t *testing.T) {

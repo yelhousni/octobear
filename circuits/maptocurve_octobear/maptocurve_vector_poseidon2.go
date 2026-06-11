@@ -5,12 +5,12 @@ import (
 	"errors"
 	"math/big"
 
-	octobear "github.com/yelhousni/octobear/curve"
-	multisethash "github.com/yelhousni/octobear/curve/multiset-hash"
 	"github.com/consensys/gnark/frontend"
+	"github.com/consensys/gnark/std/rangecheck"
 	"github.com/yelhousni/octobear/circuits/fields_octobear"
 	poseidon2 "github.com/yelhousni/octobear/circuits/poseidon2_koalabear"
-	"github.com/consensys/gnark/std/rangecheck"
+	octobear "github.com/yelhousni/octobear/curve"
+	multisethash "github.com/yelhousni/octobear/curve/multiset-hash"
 )
 
 // Poseidon2-sponge vector ECMSH parameters (paper §4.3 "preferred" derivation).

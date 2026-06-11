@@ -6,9 +6,9 @@ import (
 	"math/big"
 	"sync"
 
-	octobear "github.com/yelhousni/octobear/curve"
 	"github.com/consensys/gnark-crypto/field/koalabear"
 	"github.com/consensys/gnark-crypto/field/koalabear/poseidon2"
+	octobear "github.com/yelhousni/octobear/curve"
 )
 
 // Poseidon2-sponge vector ECMSH (Section 4.3 "preferred concrete derivation").

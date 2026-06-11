@@ -1,8 +1,8 @@
 package fields_octobear
 
 import (
-	"github.com/yelhousni/octobear/curve/extensions"
 	"github.com/consensys/gnark/frontend"
+	"github.com/yelhousni/octobear/curve/extensions"
 	"github.com/yelhousni/octobear/internal/frontendtype"
 )
 
